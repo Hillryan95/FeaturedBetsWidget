@@ -9,21 +9,53 @@ import UIKit
 
 class MockBetSlipViewController: UIViewController {
 
+    public var betAddedLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 30.0, weight: .medium)
+        label.textColor = .white
+        label.textAlignment = .left
+        return label
+    }()
+
+    public var returnHomeButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemGreen
+        button.titleLabel?.textColor = .white
+        button.addTarget(self, action: #selector(returnHomeButtonTapped(_:)), for: .touchUpInside)
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
+        configure()
+        addSubviews()
+        setupConstraints()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configure() {
+        betAddedLabel.text = "Bet Added to Betslip"
+        returnHomeButton.setTitle("Return Home", for: .normal)
     }
-    */
 
+    private func addSubviews() {
+        view.addSubview(betAddedLabel)
+        view.addSubview(returnHomeButton)
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            betAddedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            betAddedLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+            returnHomeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            returnHomeButton.topAnchor.constraint(equalTo: betAddedLabel.bottomAnchor, constant: 20.0)
+        ])
+    }
+
+    @objc private func returnHomeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
