@@ -17,7 +17,7 @@ class FeaturedBetService {
 
     init(betProvider: BetProvider = BetProvider()) {
         self.betProvider = betProvider
-        betProvider.loadRecipes()
+        betProvider.loadGames()
     }
 
     var randomBet: FeaturedBet {

@@ -14,7 +14,7 @@ class BetProvider {
     init() {
     }
 
-    func loadRecipes() {
+    func loadGames() {
         guard let jsonFileURL = Bundle.main.url(forResource: "featuredBets", withExtension: "json") else {
             print("unable to find json")
             return
