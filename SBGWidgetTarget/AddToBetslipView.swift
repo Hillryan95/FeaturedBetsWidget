@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AddToBetslipView: View {
+    var price: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct AddToBetslipView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddToBetslipView()
+        VStack(alignment: .center) {
+            Divider()
+            Text("Add to Bet Slip ")
+                .font(.system(size: 12.0, weight: .semibold))
+            Text(price)
+                .font(.system(size: 12.0, weight: .semibold))
+                .foregroundColor(.red)
+        }
+        .frame(width: .infinity, height: .infinity, alignment: .center)
+        .padding(.bottom, 10.0)
     }
 }

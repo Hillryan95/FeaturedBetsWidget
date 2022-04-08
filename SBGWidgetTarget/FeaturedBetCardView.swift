@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct FeaturedBetCardView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    var name: String
+    var price: String
+    var outcome: String
+    var sport: String
+    var location: String
+    var time: String
 
-struct FeaturedBetCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeaturedBetCardView()
+    var body: some View {
+        VStack {
+            EventInformationView(name: name, outcome: outcome, location: location, time: time)
+
+            Spacer()
+
+            AddToBetslipView(price: price)
+        }
+        .tint(Color(uiColor: .skyBetBlue!))
+        .frame(width: 120, height: 120)
+        .background(RoundedRectangle(cornerRadius: 12.0, style: .continuous)
+            .fill(Color.white))
+        .overlay(SportsIconView(sport: sport))
     }
 }
