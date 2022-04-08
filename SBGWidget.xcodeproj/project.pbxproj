@@ -7,15 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A21CAF227FC9D9500CEF0F1 /* EventInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21CAF127FC9D9500CEF0F1 /* EventInformationView.swift */; };
+		3A21CAF427FC9DE100CEF0F1 /* AddToBetslipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21CAF327FC9DE100CEF0F1 /* AddToBetslipView.swift */; };
+		3A21CAF627FCA1E700CEF0F1 /* SportsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21CAF527FCA1E700CEF0F1 /* SportsIconView.swift */; };
 		3A2B889C27C3DE06007C79F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B889B27C3DE06007C79F9 /* AppDelegate.swift */; };
 		3A2B889E27C3DE06007C79F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B889D27C3DE06007C79F9 /* SceneDelegate.swift */; };
 		3A2B88A027C3DE06007C79F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B889F27C3DE06007C79F9 /* ViewController.swift */; };
 		3A2B88A327C3DE06007C79F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88A127C3DE06007C79F9 /* Main.storyboard */; };
 		3A2B88A527C3DE09007C79F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88A427C3DE09007C79F9 /* Assets.xcassets */; };
 		3A2B88A827C3DE0A007C79F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88A627C3DE0A007C79F9 /* LaunchScreen.storyboard */; };
+		3A2B88B227C3DFDB007C79F9 /* FeaturedBet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B127C3DFDB007C79F9 /* FeaturedBet.swift */; };
+		3A2B88B427C3E000007C79F9 /* FeaturedBetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B327C3E000007C79F9 /* FeaturedBetProvider.swift */; };
+		3A2B88B627C3E013007C79F9 /* FeaturedBetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B527C3E013007C79F9 /* FeaturedBetService.swift */; };
+		3A2B88B827C3E02A007C79F9 /* FeaturedBetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B727C3E02A007C79F9 /* FeaturedBetViewModel.swift */; };
+		3A2B88BA27C3E046007C79F9 /* featuredBets.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88B927C3E046007C79F9 /* featuredBets.json */; };
+		3A2B88C227C3E099007C79F9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B88C127C3E099007C79F9 /* WidgetKit.framework */; };
+		3A2B88C427C3E099007C79F9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B88C327C3E099007C79F9 /* SwiftUI.framework */; };
+		3A2B88C727C3E099007C79F9 /* SBGWidgetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88C627C3E099007C79F9 /* SBGWidgetTarget.swift */; };
+		3A2B88CA27C3E09C007C79F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88C927C3E09C007C79F9 /* Assets.xcassets */; };
+		3A2B88CC27C3E09C007C79F9 /* SBGWidgetTarget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88C827C3E099007C79F9 /* SBGWidgetTarget.intentdefinition */; };
+		3A2B88CD27C3E09C007C79F9 /* SBGWidgetTarget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88C827C3E099007C79F9 /* SBGWidgetTarget.intentdefinition */; };
+		3A2B88D027C3E09C007C79F9 /* SBGWidgetTargetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A2B88DB27C3E57E007C79F9 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */; };
+		3A2B88DE27C510F9007C79F9 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */; };
+		3A2B88E127C51CCC007C79F9 /* FeaturedBetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DF27C51AEA007C79F9 /* FeaturedBetCardView.swift */; };
+		3A80529B27F63D9600DD91F4 /* MockBetSlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80529A27F63D9600DD91F4 /* MockBetSlipViewController.swift */; };
+		3AB559A427D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB559A327D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift */; };
+		3AB559A527D140ED00C3E554 /* FeaturedBetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B727C3E02A007C79F9 /* FeaturedBetViewModel.swift */; };
+		3AB559A627D22D3400C3E554 /* FeaturedBet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B127C3DFDB007C79F9 /* FeaturedBet.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A2B88CE27C3E09C007C79F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2B889027C3DE06007C79F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A2B88BE27C3E099007C79F9;
+			remoteInfo = SBGWidgetTargetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A2B88D427C3E09C007C79F9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A2B88D027C3E09C007C79F9 /* SBGWidgetTargetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A21CAF127FC9D9500CEF0F1 /* EventInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInformationView.swift; sourceTree = "<group>"; };
+		3A21CAF327FC9DE100CEF0F1 /* AddToBetslipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBetslipView.swift; sourceTree = "<group>"; };
+		3A21CAF527FCA1E700CEF0F1 /* SportsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsIconView.swift; sourceTree = "<group>"; };
 		3A2B889827C3DE06007C79F9 /* SBGWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBGWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2B889B27C3DE06007C79F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2B889D27C3DE06007C79F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +73,24 @@
 		3A2B88A427C3DE09007C79F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A2B88A727C3DE0A007C79F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2B88A927C3DE0A007C79F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2B88B127C3DFDB007C79F9 /* FeaturedBet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBet.swift; sourceTree = "<group>"; };
+		3A2B88B327C3E000007C79F9 /* FeaturedBetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBetProvider.swift; sourceTree = "<group>"; };
+		3A2B88B527C3E013007C79F9 /* FeaturedBetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBetService.swift; sourceTree = "<group>"; };
+		3A2B88B727C3E02A007C79F9 /* FeaturedBetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBetViewModel.swift; sourceTree = "<group>"; };
+		3A2B88B927C3E046007C79F9 /* featuredBets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featuredBets.json; sourceTree = "<group>"; };
+		3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SBGWidgetTargetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2B88C127C3E099007C79F9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3A2B88C327C3E099007C79F9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3A2B88C627C3E099007C79F9 /* SBGWidgetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBGWidgetTarget.swift; sourceTree = "<group>"; };
+		3A2B88C827C3E099007C79F9 /* SBGWidgetTarget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SBGWidgetTarget.intentdefinition; sourceTree = "<group>"; };
+		3A2B88C927C3E09C007C79F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A2B88CB27C3E09C007C79F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		3A2B88DC27C4E408007C79F9 /* SBGWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SBGWidget.entitlements; sourceTree = "<group>"; };
+		3A2B88DD27C4E40F007C79F9 /* SBGWidgetTargetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SBGWidgetTargetExtension.entitlements; sourceTree = "<group>"; };
+		3A2B88DF27C51AEA007C79F9 /* FeaturedBetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBetCardView.swift; sourceTree = "<group>"; };
+		3A80529A27F63D9600DD91F4 /* MockBetSlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBetSlipViewController.swift; sourceTree = "<group>"; };
+		3AB559A327D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeFeaturedBetToUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +101,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A2B88BC27C3E099007C79F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2B88C427C3E099007C79F9 /* SwiftUI.framework in Frameworks */,
+				3A2B88C227C3E099007C79F9 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3A2B888F27C3DE06007C79F9 = {
 			isa = PBXGroup;
 			children = (
+				3A2B88DD27C4E40F007C79F9 /* SBGWidgetTargetExtension.entitlements */,
 				3A2B889A27C3DE06007C79F9 /* SBGWidget */,
+				3A2B88C527C3E099007C79F9 /* SBGWidgetTarget */,
+				3A2B88C027C3E099007C79F9 /* Frameworks */,
 				3A2B889927C3DE06007C79F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3A2B889827C3DE06007C79F9 /* SBGWidget.app */,
+				3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +136,88 @@
 		3A2B889A27C3DE06007C79F9 /* SBGWidget */ = {
 			isa = PBXGroup;
 			children = (
+				3A2B88DC27C4E408007C79F9 /* SBGWidget.entitlements */,
+				3A2B88D927C3E570007C79F9 /* Extensions */,
+				3A2B88D527C3E0AD007C79F9 /* Model */,
+				3A2B88D627C3E0B7007C79F9 /* Services */,
+				3A2B88D727C3E0CA007C79F9 /* ViewModel */,
+				3A2B88D827C3E0DE007C79F9 /* Views */,
 				3A2B889B27C3DE06007C79F9 /* AppDelegate.swift */,
 				3A2B889D27C3DE06007C79F9 /* SceneDelegate.swift */,
-				3A2B889F27C3DE06007C79F9 /* ViewController.swift */,
 				3A2B88A127C3DE06007C79F9 /* Main.storyboard */,
 				3A2B88A427C3DE09007C79F9 /* Assets.xcassets */,
 				3A2B88A627C3DE0A007C79F9 /* LaunchScreen.storyboard */,
 				3A2B88A927C3DE0A007C79F9 /* Info.plist */,
+				3A2B88B927C3E046007C79F9 /* featuredBets.json */,
 			);
 			path = SBGWidget;
+			sourceTree = "<group>";
+		};
+		3A2B88C027C3E099007C79F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88C127C3E099007C79F9 /* WidgetKit.framework */,
+				3A2B88C327C3E099007C79F9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A2B88C527C3E099007C79F9 /* SBGWidgetTarget */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88C627C3E099007C79F9 /* SBGWidgetTarget.swift */,
+				3A2B88C827C3E099007C79F9 /* SBGWidgetTarget.intentdefinition */,
+				3A2B88C927C3E09C007C79F9 /* Assets.xcassets */,
+				3A2B88CB27C3E09C007C79F9 /* Info.plist */,
+				3A2B88DF27C51AEA007C79F9 /* FeaturedBetCardView.swift */,
+				3A21CAF127FC9D9500CEF0F1 /* EventInformationView.swift */,
+				3A21CAF327FC9DE100CEF0F1 /* AddToBetslipView.swift */,
+				3A21CAF527FCA1E700CEF0F1 /* SportsIconView.swift */,
+			);
+			path = SBGWidgetTarget;
+			sourceTree = "<group>";
+		};
+		3A2B88D527C3E0AD007C79F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88B127C3DFDB007C79F9 /* FeaturedBet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A2B88D627C3E0B7007C79F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88B327C3E000007C79F9 /* FeaturedBetProvider.swift */,
+				3A2B88B527C3E013007C79F9 /* FeaturedBetService.swift */,
+				3AB559A327D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3A2B88D727C3E0CA007C79F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88B727C3E02A007C79F9 /* FeaturedBetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A2B88D827C3E0DE007C79F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B889F27C3DE06007C79F9 /* ViewController.swift */,
+				3A80529A27F63D9600DD91F4 /* MockBetSlipViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A2B88D927C3E570007C79F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +230,34 @@
 				3A2B889427C3DE06007C79F9 /* Sources */,
 				3A2B889527C3DE06007C79F9 /* Frameworks */,
 				3A2B889627C3DE06007C79F9 /* Resources */,
+				3A2B88D427C3E09C007C79F9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A2B88CF27C3E09C007C79F9 /* PBXTargetDependency */,
 			);
 			name = SBGWidget;
 			productName = SBGWidget;
 			productReference = 3A2B889827C3DE06007C79F9 /* SBGWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3A2B88BE27C3E099007C79F9 /* SBGWidgetTargetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2B88D127C3E09C007C79F9 /* Build configuration list for PBXNativeTarget "SBGWidgetTargetExtension" */;
+			buildPhases = (
+				3A2B88BB27C3E099007C79F9 /* Sources */,
+				3A2B88BC27C3E099007C79F9 /* Frameworks */,
+				3A2B88BD27C3E099007C79F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBGWidgetTargetExtension;
+			productName = SBGWidgetTargetExtension;
+			productReference = 3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +270,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					3A2B889727C3DE06007C79F9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3A2B88BE27C3E099007C79F9 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -116,6 +291,7 @@
 			projectRoot = "";
 			targets = (
 				3A2B889727C3DE06007C79F9 /* SBGWidget */,
+				3A2B88BE27C3E099007C79F9 /* SBGWidgetTargetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +304,15 @@
 				3A2B88A827C3DE0A007C79F9 /* LaunchScreen.storyboard in Resources */,
 				3A2B88A527C3DE09007C79F9 /* Assets.xcassets in Resources */,
 				3A2B88A327C3DE06007C79F9 /* Main.storyboard in Resources */,
+				3A2B88BA27C3E046007C79F9 /* featuredBets.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2B88BD27C3E099007C79F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2B88CA27C3E09C007C79F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,13 +323,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2B88CD27C3E09C007C79F9 /* SBGWidgetTarget.intentdefinition in Sources */,
 				3A2B88A027C3DE06007C79F9 /* ViewController.swift in Sources */,
+				3A2B88B427C3E000007C79F9 /* FeaturedBetProvider.swift in Sources */,
 				3A2B889C27C3DE06007C79F9 /* AppDelegate.swift in Sources */,
+				3A2B88B827C3E02A007C79F9 /* FeaturedBetViewModel.swift in Sources */,
+				3AB559A427D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift in Sources */,
+				3A80529B27F63D9600DD91F4 /* MockBetSlipViewController.swift in Sources */,
 				3A2B889E27C3DE06007C79F9 /* SceneDelegate.swift in Sources */,
+				3A2B88DB27C3E57E007C79F9 /* UIColor + Extensions.swift in Sources */,
+				3A2B88B227C3DFDB007C79F9 /* FeaturedBet.swift in Sources */,
+				3A2B88B627C3E013007C79F9 /* FeaturedBetService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2B88BB27C3E099007C79F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A21CAF227FC9D9500CEF0F1 /* EventInformationView.swift in Sources */,
+				3A2B88E127C51CCC007C79F9 /* FeaturedBetCardView.swift in Sources */,
+				3AB559A627D22D3400C3E554 /* FeaturedBet.swift in Sources */,
+				3A21CAF427FC9DE100CEF0F1 /* AddToBetslipView.swift in Sources */,
+				3A2B88DE27C510F9007C79F9 /* UIColor + Extensions.swift in Sources */,
+				3AB559A527D140ED00C3E554 /* FeaturedBetViewModel.swift in Sources */,
+				3A2B88CC27C3E09C007C79F9 /* SBGWidgetTarget.intentdefinition in Sources */,
+				3A2B88C727C3E099007C79F9 /* SBGWidgetTarget.swift in Sources */,
+				3A21CAF627FCA1E700CEF0F1 /* SportsIconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A2B88CF27C3E09C007C79F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A2B88BE27C3E099007C79F9 /* SBGWidgetTargetExtension */;
+			targetProxy = 3A2B88CE27C3E09C007C79F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A2B88A127C3DE06007C79F9 /* Main.storyboard */ = {
@@ -285,8 +502,10 @@
 		3A2B88AD27C3DE0A007C79F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SBGWidget/SBGWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QLF48FFBV7;
@@ -313,8 +532,10 @@
 		3A2B88AE27C3DE0A007C79F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SBGWidget/SBGWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QLF48FFBV7;
@@ -338,6 +559,62 @@
 			};
 			name = Release;
 		};
+		3A2B88D227C3E09C007C79F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SBGWidgetTargetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLF48FFBV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SBGWidgetTarget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SBGWidgetTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.SBGWidget.SBGWidgetTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2B88D327C3E09C007C79F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SBGWidgetTargetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLF48FFBV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SBGWidgetTarget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SBGWidgetTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.SBGWidget.SBGWidgetTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +632,15 @@
 			buildConfigurations = (
 				3A2B88AD27C3DE0A007C79F9 /* Debug */,
 				3A2B88AE27C3DE0A007C79F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2B88D127C3E09C007C79F9 /* Build configuration list for PBXNativeTarget "SBGWidgetTargetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2B88D227C3E09C007C79F9 /* Debug */,
+				3A2B88D327C3E09C007C79F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
