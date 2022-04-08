@@ -14,13 +14,6 @@ struct FeaturedBetViewModel {
         self.model = model
     }
 
-//    var name: String
-//    var outcome: String
-//    var time: String
-//    var location: String
-//    var price: String
-//    var sport: String
-
     var name: String {
         return model.name.capitalized
     }
