@@ -24,7 +24,7 @@ struct FeaturedBetCardView: View {
             AddToBetslipView(price: price)
         }
         .tint(Color(uiColor: .skyBetBlue!))
-        .frame(width: 120, height: 120)
+        .frame(width: 130, height: 130)
         .background(RoundedRectangle(cornerRadius: 12.0, style: .continuous)
             .fill(Color.white))
         .overlay(SportsIconView(sport: sport))
