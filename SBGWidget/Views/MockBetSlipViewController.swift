@@ -9,6 +9,8 @@ import UIKit
 
 class MockBetSlipViewController: UIViewController {
 
+    var price: String?
+
     public var betAddedLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +38,8 @@ class MockBetSlipViewController: UIViewController {
     }
 
     private func configure() {
-        betAddedLabel.text = "Bet Added to Betslip"
+        let price = price ?? ""
+        betAddedLabel.text = "Bet Added to Betslip \(price)"
         returnHomeButton.setTitle("Return Home", for: .normal)
     }
 
