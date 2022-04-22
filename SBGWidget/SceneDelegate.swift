@@ -51,48 +51,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let url = URLContexts.first?.url {
             handleURL(url)
         }
-//        guard let urlToOpen = URLContexts.first?.url else { return }
-//
-//        handleURL(urlToOpen)
     }
 
     func handleURL(_ url: URL) {
-      guard url.pathComponents.count >= 2 else {
-          print("component count \(url.pathComponents.count)")
-          return }
-        for component in url.pathComponents {
-            print("\(component)")
+
+        guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
+
+        if urlComponents.host == "betslip",
+            let priceQueryItem = urlComponents.queryItems?.first,
+            let price = priceQueryItem.value {
+            navigateToMockBetslip(price: price)
         }
-
-      let section = url.pathComponents[1]
-      let detail = url.pathComponents[2]
-
-      switch section {
-      case "betslip":
-        guard let id = Int(detail) else { break }
-          navigateToMockBetslip(id)
-      default: break
-      }
     }
 
-    func navigateToMockBetslip(_ id: Int) {
-      // 1
-      guard let rootController = window?.rootViewController else {
-        return
-      }
+    func navigateToMockBetslip(price: String) {
 
-      // 2
-//      guard let viewControllers = tabBarController.viewControllers,
-//        let listIndex = viewControllers.firstIndex(where: { $0 is ListNavigationController }),
-//        let listViewController = viewControllers[listIndex] as? ListNavigationController else { return }
+        guard let rootController = window?.rootViewController else {
+            return
+        }
 
-      // 3
-//        rootController.popToRootViewController(animated: false)
-//      tabBarController.selectedIndex = listIndex
-
-      // 4
-      let mockBetslipViewController = MockBetSlipViewController()
-      rootController.present(mockBetslipViewController, animated: true)
+        let mockBetslipViewController = MockBetSlipViewController()
+        mockBetslipViewController.price = price
+        rootController.present(mockBetslipViewController, animated: true)
     }
 }
 

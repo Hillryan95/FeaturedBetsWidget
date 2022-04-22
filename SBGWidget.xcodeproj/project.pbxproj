@@ -137,11 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				3A2B88DC27C4E408007C79F9 /* SBGWidget.entitlements */,
-				3A2B88D927C3E570007C79F9 /* Extensions */,
-				3A2B88D527C3E0AD007C79F9 /* Model */,
 				3A2B88D627C3E0B7007C79F9 /* Services */,
+				3A2B88D527C3E0AD007C79F9 /* Model */,
 				3A2B88D727C3E0CA007C79F9 /* ViewModel */,
 				3A2B88D827C3E0DE007C79F9 /* Views */,
+				3A2B88D927C3E570007C79F9 /* Extensions */,
 				3A2B889B27C3DE06007C79F9 /* AppDelegate.swift */,
 				3A2B889D27C3DE06007C79F9 /* SceneDelegate.swift */,
 				3A2B88A127C3DE06007C79F9 /* Main.storyboard */,
