@@ -71,10 +71,10 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
 
         NSLayoutConstraint.activate([
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20.0),
             stackView.topAnchor.constraint(equalTo: view.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10.0),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -174,12 +174,12 @@ class ViewController: UIViewController {
         getFreeBetButton = UIButton(frame: .zero)
         getFreeBetButton.translatesAutoresizingMaskIntoConstraints = false
         getFreeBetButton.layer.cornerRadius = Constants.cornerRadius
-        getFreeBetButton.backgroundColor = .skyBetBlue
+        getFreeBetButton.backgroundColor = .systemGreen
         getFreeBetButton.setContentHuggingPriority(.required, for: .horizontal)
         getFreeBetButton.setContentCompressionResistancePriority(.required, for: .horizontal)
         getFreeBetButton.setTitle("Get Featured Bet", for: .normal)
         getFreeBetButton.tintColor = .skyBetBlue
-        getFreeBetButton.addTarget(self, action: #selector(setupButtonTapped(_:)), for: .touchUpInside)
+        getFreeBetButton.addTarget(self, action: #selector(getFeaturedBetButtonTapped(_:)), for: .touchUpInside)
         stackView.addArrangedSubview(getFreeBetButton)
 
         NSLayoutConstraint.activate([
@@ -206,7 +206,7 @@ class ViewController: UIViewController {
         ])
     }
 
-    @objc private func setupButtonTapped(_ sender: UIButton) {
+    @objc private func getFeaturedBetButtonTapped(_ sender: UIButton) {
         let randomViewModel = viewModels.randomElement()!
         configure(with: randomViewModel)
 
