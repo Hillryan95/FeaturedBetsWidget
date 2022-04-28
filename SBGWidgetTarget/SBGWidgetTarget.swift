@@ -16,7 +16,7 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), name: "", price: "", outcome: "", sport: "", location: "", time: "", configuration: configuration)
+        let entry = SimpleEntry(date: Date(), name: "Liverpool", price: "1.60", outcome: "Win", sport: "⚽️", location: "Everton", time: "15.00", configuration: configuration)
         completion(entry)
     }
 
@@ -34,13 +34,25 @@ struct Provider: IntentTimelineProvider {
         let location = featuredBetArray[4]
         let time = featuredBetArray[5]
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let entry = SimpleEntry(date: Date(), name: name , price: price, outcome: outcome, sport: sport, location: location, time: time, configuration: configuration)
         entries.append(entry)
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
+
+    // Need to get the random featured bet in here becuase you can't pass the featured bet object through user defaults. This needs to be done locally and the API call would need to be done in the widget as well. Bring featuerdBetService into the widget and call featuredBetService.random to store the first two random bets in here and pass the whole object into the entry.
+
+    // let randomFeaturedBets: [FeaturedBet]
+    // let randomFeaturedBetVMs = randomFeaturedBets.map etc
+
+//        let featuredBetArray = ["a","b","c","d","e","f","g","h","i"]
+//        let name = featuredBetArray.randomElement()!
+//        let price = featuredBetArray.randomElement()!
+//        let outcome = featuredBetArray.randomElement()!
+//        let sport = featuredBetArray.randomElement()!
+//        let location = featuredBetArray.randomElement()!
+//        let time = featuredBetArray.randomElement()!
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -56,6 +68,7 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct SBGWidgetTargetEntryView : View {
+    @Environment(\.widgetFamily) var widgetFamily
     var entry: Provider.Entry
 
     var body: some View {
@@ -63,7 +76,7 @@ struct SBGWidgetTargetEntryView : View {
             Color(UIColor.skyBetBlue!)
 
             FeaturedBetCardView(name: entry.name, price: entry.price, outcome: entry.outcome, sport: entry.sport, location: entry.location, time: entry.time)
-                .widgetURL(URL(string: "sbgwidget://betslip")!)
+                .widgetURL(URL(string: "sbgwidget://betslip?price=\(entry.price)")!)
         }
     }
 }
@@ -75,9 +88,10 @@ struct SBGWidgetTarget: Widget {
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             SBGWidgetTargetEntryView(entry: entry)
+                .redacted(reason: .placeholder)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Sky Bet Widget")
+        .description("Use this Widget to See our Featured Bets.")
     }
 }
 //
