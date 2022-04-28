@@ -40,19 +40,6 @@ struct Provider: IntentTimelineProvider {
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
-
-    // Need to get the random featured bet in here becuase you can't pass the featured bet object through user defaults. This needs to be done locally and the API call would need to be done in the widget as well. Bring featuerdBetService into the widget and call featuredBetService.random to store the first two random bets in here and pass the whole object into the entry.
-
-    // let randomFeaturedBets: [FeaturedBet]
-    // let randomFeaturedBetVMs = randomFeaturedBets.map etc
-
-//        let featuredBetArray = ["a","b","c","d","e","f","g","h","i"]
-//        let name = featuredBetArray.randomElement()!
-//        let price = featuredBetArray.randomElement()!
-//        let outcome = featuredBetArray.randomElement()!
-//        let sport = featuredBetArray.randomElement()!
-//        let location = featuredBetArray.randomElement()!
-//        let time = featuredBetArray.randomElement()!
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -88,16 +75,8 @@ struct SBGWidgetTarget: Widget {
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             SBGWidgetTargetEntryView(entry: entry)
-                .redacted(reason: .placeholder)
         }
         .configurationDisplayName("Sky Bet Widget")
         .description("Use this Widget to See our Featured Bets.")
     }
 }
-//
-//struct SBGWidgetTarget_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SBGWidgetTargetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
-//    }
-//}
