@@ -11,7 +11,7 @@ class MockBetSlipViewController: UIViewController {
 
     var price: String?
 
-    public var betAddedLabel: UILabel = {
+    public let betAddedLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 30.0, weight: .medium)
@@ -20,9 +20,10 @@ class MockBetSlipViewController: UIViewController {
         return label
     }()
 
-    public var returnHomeButton: UIButton = {
+    public let returnHomeButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = Constants.spacing
         button.backgroundColor = .systemGreen
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(returnHomeButtonTapped(_:)), for: .touchUpInside)
@@ -31,7 +32,7 @@ class MockBetSlipViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .skyBetBlue
         configure()
         addSubviews()
         setupConstraints()
@@ -39,7 +40,7 @@ class MockBetSlipViewController: UIViewController {
 
     private func configure() {
         let price = price ?? ""
-        betAddedLabel.text = "Bet Added to Betslip \(price)"
+        betAddedLabel.text = "Bet Added to Bet Slip \(price)"
         returnHomeButton.setTitle("Return Home", for: .normal)
     }
 
@@ -54,11 +55,18 @@ class MockBetSlipViewController: UIViewController {
             betAddedLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
             returnHomeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            returnHomeButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20.0),
             returnHomeButton.topAnchor.constraint(equalTo: betAddedLabel.bottomAnchor, constant: 20.0)
         ])
     }
 
     @objc private func returnHomeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension MockBetSlipViewController {
+    enum Constants {
+        static let spacing = 10.0
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 struct FeaturedBet: Codable {
-//    var id = UUID()
     var name: String
     var outcome: String
     var time: String

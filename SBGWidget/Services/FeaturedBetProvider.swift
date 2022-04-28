@@ -14,7 +14,7 @@ class BetProvider {
     init() {
     }
 
-    func loadGames() {
+    func loadFeaturedBets() {
         guard let jsonFileURL = Bundle.main.url(forResource: "featuredBets", withExtension: "json") else {
             print("unable to find json")
             return
@@ -27,11 +27,11 @@ class BetProvider {
         }
         print("created json")
 
-        guard let loadedRecipes = try? JSONDecoder().decode([FeaturedBet].self, from: jsonData) else {
+        guard let loadedBets = try? JSONDecoder().decode([FeaturedBet].self, from: jsonData) else {
             print("unable to decode json")
             return
         }
 
-        bets = loadedRecipes
+        bets = loadedBets
     }
 }

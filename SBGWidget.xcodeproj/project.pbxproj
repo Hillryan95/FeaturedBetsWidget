@@ -31,6 +31,8 @@
 		3A2B88DB27C3E57E007C79F9 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */; };
 		3A2B88DE27C510F9007C79F9 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DA27C3E57E007C79F9 /* UIColor + Extensions.swift */; };
 		3A2B88E127C51CCC007C79F9 /* FeaturedBetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88DF27C51AEA007C79F9 /* FeaturedBetCardView.swift */; };
+		3A7801252817F4A900E4A28D /* SBGWidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7801242817F4A900E4A28D /* SBGWidgetTests.swift */; };
+		3A78012C2819DAA600E4A28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B88A427C3DE09007C79F9 /* Assets.xcassets */; };
 		3A80529B27F63D9600DD91F4 /* MockBetSlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80529A27F63D9600DD91F4 /* MockBetSlipViewController.swift */; };
 		3AB559A427D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB559A327D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift */; };
 		3AB559A527D140ED00C3E554 /* FeaturedBetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B88B727C3E02A007C79F9 /* FeaturedBetViewModel.swift */; };
@@ -44,6 +46,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3A2B88BE27C3E099007C79F9;
 			remoteInfo = SBGWidgetTargetExtension;
+		};
+		3A7801262817F4A900E4A28D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2B889027C3DE06007C79F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A2B889727C3DE06007C79F9;
+			remoteInfo = SBGWidget;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,6 +98,8 @@
 		3A2B88DC27C4E408007C79F9 /* SBGWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SBGWidget.entitlements; sourceTree = "<group>"; };
 		3A2B88DD27C4E40F007C79F9 /* SBGWidgetTargetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SBGWidgetTargetExtension.entitlements; sourceTree = "<group>"; };
 		3A2B88DF27C51AEA007C79F9 /* FeaturedBetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBetCardView.swift; sourceTree = "<group>"; };
+		3A7801222817F4A900E4A28D /* SBGWidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBGWidgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7801242817F4A900E4A28D /* SBGWidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBGWidgetTests.swift; sourceTree = "<group>"; };
 		3A80529A27F63D9600DD91F4 /* MockBetSlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBetSlipViewController.swift; sourceTree = "<group>"; };
 		3AB559A327D136F100C3E554 /* EncodeFeaturedBetToUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeFeaturedBetToUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +121,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A78011F2817F4A900E4A28D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +137,7 @@
 				3A2B88DD27C4E40F007C79F9 /* SBGWidgetTargetExtension.entitlements */,
 				3A2B889A27C3DE06007C79F9 /* SBGWidget */,
 				3A2B88C527C3E099007C79F9 /* SBGWidgetTarget */,
+				3A7801232817F4A900E4A28D /* SBGWidgetTests */,
 				3A2B88C027C3E099007C79F9 /* Frameworks */,
 				3A2B889927C3DE06007C79F9 /* Products */,
 			);
@@ -129,6 +148,7 @@
 			children = (
 				3A2B889827C3DE06007C79F9 /* SBGWidget.app */,
 				3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */,
+				3A7801222817F4A900E4A28D /* SBGWidgetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +240,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3A7801232817F4A900E4A28D /* SBGWidgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A7801242817F4A900E4A28D /* SBGWidgetTests.swift */,
+			);
+			path = SBGWidgetTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,6 +287,24 @@
 			productReference = 3A2B88BF27C3E099007C79F9 /* SBGWidgetTargetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		3A7801212817F4A900E4A28D /* SBGWidgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7801282817F4A900E4A28D /* Build configuration list for PBXNativeTarget "SBGWidgetTests" */;
+			buildPhases = (
+				3A78011E2817F4A900E4A28D /* Sources */,
+				3A78011F2817F4A900E4A28D /* Frameworks */,
+				3A7801202817F4A900E4A28D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A7801272817F4A900E4A28D /* PBXTargetDependency */,
+			);
+			name = SBGWidgetTests;
+			productName = SBGWidgetTests;
+			productReference = 3A7801222817F4A900E4A28D /* SBGWidgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,7 +312,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					3A2B889727C3DE06007C79F9 = {
@@ -274,6 +320,10 @@
 					};
 					3A2B88BE27C3E099007C79F9 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					3A7801212817F4A900E4A28D = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3A2B889727C3DE06007C79F9;
 					};
 				};
 			};
@@ -292,6 +342,7 @@
 			targets = (
 				3A2B889727C3DE06007C79F9 /* SBGWidget */,
 				3A2B88BE27C3E099007C79F9 /* SBGWidgetTargetExtension */,
+				3A7801212817F4A900E4A28D /* SBGWidgetTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +363,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A78012C2819DAA600E4A28D /* Assets.xcassets in Resources */,
 				3A2B88CA27C3E09C007C79F9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7801202817F4A900E4A28D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +412,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A78011E2817F4A900E4A28D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7801252817F4A900E4A28D /* SBGWidgetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -360,6 +427,11 @@
 			isa = PBXTargetDependency;
 			target = 3A2B88BE27C3E099007C79F9 /* SBGWidgetTargetExtension */;
 			targetProxy = 3A2B88CE27C3E09C007C79F9 /* PBXContainerItemProxy */;
+		};
+		3A7801272817F4A900E4A28D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A2B889727C3DE06007C79F9 /* SBGWidget */;
+			targetProxy = 3A7801262817F4A900E4A28D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -615,6 +687,44 @@
 			};
 			name = Release;
 		};
+		3A7801292817F4A900E4A28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLF48FFBV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.SBGWidgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBGWidget.app/SBGWidget";
+			};
+			name = Debug;
+		};
+		3A78012A2817F4A900E4A28D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLF48FFBV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.SBGWidgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBGWidget.app/SBGWidget";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -641,6 +751,15 @@
 			buildConfigurations = (
 				3A2B88D227C3E09C007C79F9 /* Debug */,
 				3A2B88D327C3E09C007C79F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7801282817F4A900E4A28D /* Build configuration list for PBXNativeTarget "SBGWidgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7801292817F4A900E4A28D /* Debug */,
+				3A78012A2817F4A900E4A28D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
