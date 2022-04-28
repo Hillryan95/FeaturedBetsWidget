@@ -12,7 +12,7 @@ This may take some time.
 Once Xcode is installed, the project should be cloned. Copying and pasting the following will clone the project into you desktop directory:
 
 cd Desktop
-git clone xxxx
+git clone https://github.com/Hillryan95/FeaturedBetsWidget.git
 
 Having cloned the project, locate the 'SBGWidget.xcodeproj' and open it.
 
